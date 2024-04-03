@@ -1,0 +1,149 @@
+
+.link-color{
+    color: #00375B;
+}
+.navbar {
+    position: fixed;
+    z-index: 111;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background: #ffffff;
+    padding: 0 100px;
+    height: 65px;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo img {
+    height: 30px;
+    width: 80px;
+}
+
+.navbar .ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+.navbar .ul a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #00375B;
+}
+
+.navbar .toggle-icon {
+    display: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.7rem;
+}
+
+.navbar button.nav-button-color {
+    background: #ffe27a;
+    padding: 8px 20px;
+    border-radius: 3px;
+    font-size: 1rem;
+    border: none;
+    color: #fff;
+    transition: all 0.2s linear;
+}
+
+.navbar button.nav-button-color:hover {
+    opacity: .8;
+}
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        padding: 0 40px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .navbar .toggle-icon {
+        display: block;
+    }
+
+    .navbar .ul {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: absolute;
+        top: 66px;
+        left: 0;
+        background: #fff;
+        width: 100%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        height: 0px;
+        overflow: hidden;
+        transition: all 0.1s linear;
+        padding-left: 20px;
+        gap: 30px;
+    }
+
+    .navbar .ul.show {
+        height: 100vh;
+        padding-block: 30px;
+        padding-left: 20px;
+    }
+}
+
+.navbar .service-nav-click {
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #000;
+}
+
+.navbar .service-nav-click ul {
+    border-radius: 10px;
+    position: absolute;
+    top: 43px;
+    background: #fff;
+    box-shadow: 0 5px 5px rgb(231, 231, 231);
+    padding: 10px 20px;
+    width: 270px;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1rem;
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+
+    .navbar .service-nav-click  {
+        position: static;
+
+    }
+    .navbar .service-nav-click ul {
+        position: static;
+        width: 800px;
+        left: 0;
+    }
+
+    .navbar .service-nav-click ul.show {
+        box-shadow: none;
+    }
+}
+
+.navbar .service-nav-click ul.show {
+    display: flex;
+}
+
+.navbar .service-nav-click a {
+    display: block;
+    transition: .1s linear;
+}
+
+.navbar .service-nav-click a:hover {
+    transform: translateX(4px);
+    color: #4f4e4e;
+}
